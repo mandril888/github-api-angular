@@ -1,0 +1,44 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+      <div class="navbar-header">
+        <div class="row">
+          <form class="navbar-form navbar-left" ng-submit="submit()">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="Search username..." ng-model="memberToSearch">
+              </div>
+              <button type="submit" class="btn btn-default"><strong>Search</strong></button>
+            </form>
+        </div>
+        <div class="row">
+          <div class="userHeader">
+            <div class="col-xs-4">
+              <img src="../../img/github_ico.png" alt="Git Hub Logo">
+            </div>
+            <div class="userInfo col-xs-8">
+                <p>{{ bioUser.login }}</p>
+                <p><strong>{{ bioUser.name }}</strong></p>
+                <p>{{ bioUser.bio }}</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="reposi">
+            <p><strong>Repositories</strong></p>
+          </div>
+        </div>
+        <div class="infoRepos" ng-repeat="repos in resultsSearchedRepos">
+            <div class="row">
+                <div class="col-xs-8">
+                  <p><strong><a href=" {{ repos.html_url }}" target="_blank">{{ repos.name }}</a></strong></p>
+                </div>
+                <div class="col-xs-4">
+                  <img src="../../img/star.png" alt="">
+                  <p>{{ repos.stargazers_count }}</p>
+                  <img src="../../img/fork.png" alt="">
+                  <p>{{ repos.forks }}</p>
+                </div>
+            </div>
+        </div>
+      </div>
+  </div>
+</nav>
