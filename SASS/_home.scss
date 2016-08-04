@@ -1,0 +1,23 @@
+body {
+	background: $grayHtml;
+}
+
+.navbar {
+	margin-top: 25px;
+}
+
+.navbar-form {
+	margin: 0;
+	border: 0;
+}
+
+.container-fluid {
+	border-radius: 5px;
+	padding: 20px 30px;
+	box-shadow: 5px 5px 10px rgba(0,0,0,.5);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
